@@ -1,0 +1,13 @@
+title = "repo gitleaks config"
+
+[extend]
+useDefault = true            # start from gitleaks' built-in secret patterns
+
+[allowlist]
+description = "Files that never hold real secrets"
+paths = [
+  '''(^|/)\.terraform\.lock\.hcl$''',
+  '''(^|/)package-lock\.json$''',
+  '''(^|/)node_modules/''',
+  '''(^|/)\.terraform/''',
+]
